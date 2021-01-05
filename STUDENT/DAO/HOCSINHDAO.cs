@@ -61,7 +61,7 @@ namespace STUDENT.DAO
 
             int max_age = dt.Rows[0].Field<int>("TuoiHocSinhToiDa");
             int min_age = dt.Rows[0].Field<int>("TuoiHocSinhToiThieu");
-            if (age > min_age && age < max_age)
+            if (age >= min_age && age <= max_age)
                 return true;
             return false;
         }
