@@ -1,4 +1,3 @@
-
 use master
 go
 IF DB_ID('QLHS') IS NOT NULL
