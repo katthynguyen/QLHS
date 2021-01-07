@@ -31,6 +31,10 @@
             System.Windows.Forms.Label label1;
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbKhoi = new System.Windows.Forms.ComboBox();
+            this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.txtSiSoLop = new System.Windows.Forms.TextBox();
             this.txtMaLop = new System.Windows.Forms.TextBox();
             this.cbLopHoc = new System.Windows.Forms.ComboBox();
@@ -38,35 +42,29 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.LopHoc = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbKhoi = new System.Windows.Forms.ComboBox();
-            this.btnThemLop = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dvgDSLop = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.btnSuaHS_Lop = new System.Windows.Forms.Button();
+            this.LopHoc = new System.Windows.Forms.GroupBox();
             this.btnThoatLop = new System.Windows.Forms.Button();
-            this.btnXoaHS_Lop = new System.Windows.Forms.Button();
+            this.btnPhanLopHS = new System.Windows.Forms.Button();
             this.cbKhoi_HocSinh = new System.Windows.Forms.ComboBox();
             this.cbHocSinh_Lop = new System.Windows.Forms.ComboBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.rdbNu = new System.Windows.Forms.RadioButton();
+            this.rdbNam = new System.Windows.Forms.RadioButton();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtHocSinh = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.rdbNu = new System.Windows.Forms.RadioButton();
-            this.rdbNam = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnThemHS_Lop = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -76,14 +74,14 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.LopHoc.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDSLop)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgDSLop)).BeginInit();
+            this.LopHoc.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -91,11 +89,11 @@
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.Red;
-            label1.Location = new System.Drawing.Point(279, 9);
+            label1.Location = new System.Drawing.Point(244, 9);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(281, 29);
+            label1.Size = new System.Drawing.Size(412, 29);
             label1.TabIndex = 0;
-            label1.Text = "DANH SÁCH LỚP HỌC";
+            label1.Text = "DANH SÁCH HỌC SINH LỚP HỌC";
             // 
             // splitContainer1
             // 
@@ -131,6 +129,61 @@
             this.splitContainer2.Size = new System.Drawing.Size(900, 535);
             this.splitContainer2.SplitterDistance = 571;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer3.Size = new System.Drawing.Size(571, 535);
+            this.splitContainer3.SplitterDistance = 146;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbKhoi);
+            this.groupBox1.Controls.Add(this.btnQuanLyLop);
+            this.groupBox1.Controls.Add(this.txtSiSoLop);
+            this.groupBox1.Controls.Add(this.txtMaLop);
+            this.groupBox1.Controls.Add(this.cbLopHoc);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(571, 146);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông Tin Lớp Học";
+            // 
+            // cbKhoi
+            // 
+            this.cbKhoi.FormattingEnabled = true;
+            this.cbKhoi.Location = new System.Drawing.Point(386, 68);
+            this.cbKhoi.Name = "cbKhoi";
+            this.cbKhoi.Size = new System.Drawing.Size(158, 28);
+            this.cbKhoi.TabIndex = 31;
+            // 
+            // btnQuanLyLop
+            // 
+            this.btnQuanLyLop.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnQuanLyLop.Location = new System.Drawing.Point(83, 104);
+            this.btnQuanLyLop.Name = "btnQuanLyLop";
+            this.btnQuanLyLop.Size = new System.Drawing.Size(461, 32);
+            this.btnQuanLyLop.TabIndex = 27;
+            this.btnQuanLyLop.Text = "Quản lý thông tin lớp.";
+            this.btnQuanLyLop.UseVisualStyleBackColor = false;
             // 
             // txtSiSoLop
             // 
@@ -190,12 +243,30 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Mã Lớp:";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dvgDSLop);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(571, 385);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh Sách Lớp Học";
+            // 
+            // dvgDSLop
+            // 
+            this.dvgDSLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgDSLop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvgDSLop.Location = new System.Drawing.Point(3, 22);
+            this.dvgDSLop.Name = "dvgDSLop";
+            this.dvgDSLop.Size = new System.Drawing.Size(565, 360);
+            this.dvgDSLop.TabIndex = 0;
+            // 
             // LopHoc
             // 
             this.LopHoc.Controls.Add(this.btnThoatLop);
-            this.LopHoc.Controls.Add(this.btnSuaHS_Lop);
-            this.LopHoc.Controls.Add(this.btnXoaHS_Lop);
-            this.LopHoc.Controls.Add(this.btnThemHS_Lop);
+            this.LopHoc.Controls.Add(this.btnPhanLopHS);
             this.LopHoc.Controls.Add(this.cbKhoi_HocSinh);
             this.LopHoc.Controls.Add(this.cbHocSinh_Lop);
             this.LopHoc.Controls.Add(this.txtDiaChi);
@@ -223,118 +294,25 @@
             this.LopHoc.TabStop = false;
             this.LopHoc.Text = "Thông Tin Lớp Học";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(2, 308);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 20);
-            this.label9.TabIndex = 12;
-            // 
-            // cbKhoi
-            // 
-            this.cbKhoi.FormattingEnabled = true;
-            this.cbKhoi.Location = new System.Drawing.Point(386, 68);
-            this.cbKhoi.Name = "cbKhoi";
-            this.cbKhoi.Size = new System.Drawing.Size(158, 28);
-            this.cbKhoi.TabIndex = 31;
-            // 
-            // btnThemLop
-            // 
-            this.btnThemLop.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnThemLop.Location = new System.Drawing.Point(225, 104);
-            this.btnThemLop.Name = "btnThemLop";
-            this.btnThemLop.Size = new System.Drawing.Size(136, 32);
-            this.btnThemLop.TabIndex = 27;
-            this.btnThemLop.Text = "Quản lý Lớp Học";
-            this.btnThemLop.UseVisualStyleBackColor = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dvgDSLop);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(571, 385);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh Sách Lớp Học";
-            // 
-            // dvgDSLop
-            // 
-            this.dvgDSLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgDSLop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgDSLop.Location = new System.Drawing.Point(3, 22);
-            this.dvgDSLop.Name = "dvgDSLop";
-            this.dvgDSLop.Size = new System.Drawing.Size(565, 360);
-            this.dvgDSLop.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbKhoi);
-            this.groupBox1.Controls.Add(this.btnThemLop);
-            this.groupBox1.Controls.Add(this.txtSiSoLop);
-            this.groupBox1.Controls.Add(this.txtMaLop);
-            this.groupBox1.Controls.Add(this.cbLopHoc);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(571, 146);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Lớp Học";
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.groupBox1);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer3.Size = new System.Drawing.Size(571, 535);
-            this.splitContainer3.SplitterDistance = 146;
-            this.splitContainer3.TabIndex = 0;
-            // 
-            // btnSuaHS_Lop
-            // 
-            this.btnSuaHS_Lop.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSuaHS_Lop.Location = new System.Drawing.Point(39, 431);
-            this.btnSuaHS_Lop.Name = "btnSuaHS_Lop";
-            this.btnSuaHS_Lop.Size = new System.Drawing.Size(112, 57);
-            this.btnSuaHS_Lop.TabIndex = 31;
-            this.btnSuaHS_Lop.Text = "Hồ Sơ Học Sinh";
-            this.btnSuaHS_Lop.UseVisualStyleBackColor = false;
-            // 
             // btnThoatLop
             // 
             this.btnThoatLop.BackColor = System.Drawing.Color.Red;
-            this.btnThoatLop.Location = new System.Drawing.Point(189, 431);
+            this.btnThoatLop.Location = new System.Drawing.Point(200, 398);
             this.btnThoatLop.Name = "btnThoatLop";
-            this.btnThoatLop.Size = new System.Drawing.Size(116, 57);
+            this.btnThoatLop.Size = new System.Drawing.Size(116, 70);
             this.btnThoatLop.TabIndex = 31;
             this.btnThoatLop.Text = "Thoát";
             this.btnThoatLop.UseVisualStyleBackColor = false;
             // 
-            // btnXoaHS_Lop
+            // btnPhanLopHS
             // 
-            this.btnXoaHS_Lop.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnXoaHS_Lop.Location = new System.Drawing.Point(189, 374);
-            this.btnXoaHS_Lop.Name = "btnXoaHS_Lop";
-            this.btnXoaHS_Lop.Size = new System.Drawing.Size(116, 51);
-            this.btnXoaHS_Lop.TabIndex = 31;
-            this.btnXoaHS_Lop.Text = "Phân Lớp Học Sinh";
-            this.btnXoaHS_Lop.UseVisualStyleBackColor = false;
+            this.btnPhanLopHS.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnPhanLopHS.Location = new System.Drawing.Point(41, 398);
+            this.btnPhanLopHS.Name = "btnPhanLopHS";
+            this.btnPhanLopHS.Size = new System.Drawing.Size(116, 70);
+            this.btnPhanLopHS.TabIndex = 31;
+            this.btnPhanLopHS.Text = "Quản lý Danh Sách Học Sinh";
+            this.btnPhanLopHS.UseVisualStyleBackColor = false;
             // 
             // cbKhoi_HocSinh
             // 
@@ -359,12 +337,50 @@
             this.txtDiaChi.Size = new System.Drawing.Size(200, 26);
             this.txtDiaChi.TabIndex = 25;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 189);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 20);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Email:";
+            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(113, 186);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 26);
             this.txtEmail.TabIndex = 23;
+            // 
+            // rdbNu
+            // 
+            this.rdbNu.AutoSize = true;
+            this.rdbNu.Location = new System.Drawing.Point(205, 150);
+            this.rdbNu.Name = "rdbNu";
+            this.rdbNu.Size = new System.Drawing.Size(47, 24);
+            this.rdbNu.TabIndex = 22;
+            this.rdbNu.TabStop = true;
+            this.rdbNu.Text = "Nữ";
+            this.rdbNu.UseVisualStyleBackColor = true;
+            // 
+            // rdbNam
+            // 
+            this.rdbNam.AutoSize = true;
+            this.rdbNam.Location = new System.Drawing.Point(113, 150);
+            this.rdbNam.Name = "rdbNam";
+            this.rdbNam.Size = new System.Drawing.Size(60, 24);
+            this.rdbNam.TabIndex = 21;
+            this.rdbNam.TabStop = true;
+            this.rdbNam.Text = "Nam";
+            this.rdbNam.UseVisualStyleBackColor = true;
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Location = new System.Drawing.Point(113, 70);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(200, 26);
+            this.txtHoTen.TabIndex = 20;
             // 
             // label11
             // 
@@ -375,6 +391,14 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "Khối:";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(2, 308);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 20);
+            this.label9.TabIndex = 12;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -383,6 +407,24 @@
             this.label8.Size = new System.Drawing.Size(40, 20);
             this.label8.TabIndex = 11;
             this.label8.Text = "Lớp:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 233);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Địa chỉ:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 154);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Giới Tính:";
             // 
             // dtNgaySinh
             // 
@@ -409,13 +451,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Họ Tên:";
             // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Location = new System.Drawing.Point(113, 70);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(200, 26);
-            this.txtHoTen.TabIndex = 20;
-            // 
             // txtHocSinh
             // 
             this.txtHocSinh.Location = new System.Drawing.Point(113, 30);
@@ -431,65 +466,6 @@
             this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã Học Sinh:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 233);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Địa chỉ:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 189);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 20);
-            this.label15.TabIndex = 24;
-            this.label15.Text = "Email:";
-            // 
-            // rdbNu
-            // 
-            this.rdbNu.AutoSize = true;
-            this.rdbNu.Location = new System.Drawing.Point(205, 150);
-            this.rdbNu.Name = "rdbNu";
-            this.rdbNu.Size = new System.Drawing.Size(47, 24);
-            this.rdbNu.TabIndex = 22;
-            this.rdbNu.TabStop = true;
-            this.rdbNu.Text = "Nữ";
-            this.rdbNu.UseVisualStyleBackColor = true;
-            // 
-            // rdbNam
-            // 
-            this.rdbNam.AutoSize = true;
-            this.rdbNam.Location = new System.Drawing.Point(113, 150);
-            this.rdbNam.Name = "rdbNam";
-            this.rdbNam.Size = new System.Drawing.Size(60, 24);
-            this.rdbNam.TabIndex = 21;
-            this.rdbNam.TabStop = true;
-            this.rdbNam.Text = "Nam";
-            this.rdbNam.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 154);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Giới Tính:";
-            // 
-            // btnThemHS_Lop
-            // 
-            this.btnThemHS_Lop.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnThemHS_Lop.Location = new System.Drawing.Point(39, 374);
-            this.btnThemHS_Lop.Name = "btnThemHS_Lop";
-            this.btnThemHS_Lop.Size = new System.Drawing.Size(112, 51);
-            this.btnThemHS_Lop.TabIndex = 31;
-            this.btnThemHS_Lop.Text = "Thêm Học Sinh";
-            this.btnThemHS_Lop.UseVisualStyleBackColor = false;
             // 
             // DanhSachLopHoc
             // 
@@ -511,16 +487,16 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.LopHoc.ResumeLayout(false);
-            this.LopHoc.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDSLop)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dvgDSLop)).EndInit();
+            this.LopHoc.ResumeLayout(false);
+            this.LopHoc.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -541,12 +517,11 @@
         private System.Windows.Forms.ComboBox cbKhoi;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnThemLop;
+        private System.Windows.Forms.Button btnQuanLyLop;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dvgDSLop;
         private System.Windows.Forms.Button btnThoatLop;
-        private System.Windows.Forms.Button btnSuaHS_Lop;
-        private System.Windows.Forms.Button btnXoaHS_Lop;
+        private System.Windows.Forms.Button btnPhanLopHS;
         private System.Windows.Forms.ComboBox cbKhoi_HocSinh;
         private System.Windows.Forms.ComboBox cbHocSinh_Lop;
         private System.Windows.Forms.TextBox txtDiaChi;
@@ -564,6 +539,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtHocSinh;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnThemHS_Lop;
     }
 }

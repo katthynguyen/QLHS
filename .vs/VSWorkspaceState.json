@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\STUDENT"
+    "\\STUDENT",
+    "\\STUDENT\\GUI"
   ],
   "SelectedNode": "\\STUDENT.sln",
   "PreviewInSolutionExplorer": false

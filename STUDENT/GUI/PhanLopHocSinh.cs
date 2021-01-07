@@ -33,5 +33,10 @@ namespace STUDENT.GUI
         {
             dgvDSHS.DataSource = phanlopbus.GetStudentNotInClass();
         }
+
+        private void btnXoaHocSinhTrongLop_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

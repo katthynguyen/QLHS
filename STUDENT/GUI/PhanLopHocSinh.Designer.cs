@@ -33,9 +33,10 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDanhSachHocSinh = new System.Windows.Forms.Button();
+            this.btnHoSoHS = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgvDSHS = new System.Windows.Forms.DataGridView();
             this.btnTraCuuHocSinh = new System.Windows.Forms.Button();
-            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDanhSachLop = new System.Windows.Forms.Button();
-            this.btnLuuDanhSachLop = new System.Windows.Forms.Button();
+            this.btnLoadDSLop = new System.Windows.Forms.Button();
             this.txtSiSoLop = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbKhoi = new System.Windows.Forms.ComboBox();
@@ -54,10 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbLop = new System.Windows.Forms.ComboBox();
             this.dgvDanhSachHocSinhPhanLop = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvDSHS = new System.Windows.Forms.DataGridView();
-            this.btnHoSoHS = new System.Windows.Forms.Button();
-            this.btnLopHoc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -67,14 +64,14 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHocSinhPhanLop)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHS)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -92,8 +89,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(909, 481);
-            this.splitContainer1.SplitterDistance = 40;
+            this.splitContainer1.Size = new System.Drawing.Size(909, 524);
+            this.splitContainer1.SplitterDistance = 43;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -121,17 +118,16 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(909, 435);
+            this.splitContainer2.Size = new System.Drawing.Size(909, 475);
             this.splitContainer2.SplitterDistance = 404;
             this.splitContainer2.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnDanhSachHocSinh);
+            this.groupBox1.Controls.Add(this.btnHoSoHS);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.btnTraCuuHocSinh);
-            this.groupBox1.Controls.Add(this.dtNgaySinh);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtHoTen);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -139,7 +135,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 435);
+            this.groupBox1.Size = new System.Drawing.Size(404, 475);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tra Cứu Học Sinh Chưa Phân Lớp ";
@@ -148,39 +144,53 @@
             // 
             this.btnDanhSachHocSinh.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnDanhSachHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhSachHocSinh.Location = new System.Drawing.Point(277, 128);
+            this.btnDanhSachHocSinh.Location = new System.Drawing.Point(9, 429);
             this.btnDanhSachHocSinh.Name = "btnDanhSachHocSinh";
-            this.btnDanhSachHocSinh.Size = new System.Drawing.Size(106, 46);
+            this.btnDanhSachHocSinh.Size = new System.Drawing.Size(383, 34);
             this.btnDanhSachHocSinh.TabIndex = 2;
             this.btnDanhSachHocSinh.Text = "Danh Sách Học Sinh chưa phân lớp";
             this.btnDanhSachHocSinh.UseVisualStyleBackColor = false;
+            // 
+            // btnHoSoHS
+            // 
+            this.btnHoSoHS.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnHoSoHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoSoHS.Location = new System.Drawing.Point(279, 101);
+            this.btnHoSoHS.Name = "btnHoSoHS";
+            this.btnHoSoHS.Size = new System.Drawing.Size(104, 50);
+            this.btnHoSoHS.TabIndex = 13;
+            this.btnHoSoHS.Text = "Hồ Sơ Học Sinh";
+            this.btnHoSoHS.UseVisualStyleBackColor = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgvDSHS);
+            this.groupBox3.Location = new System.Drawing.Point(6, 171);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(392, 258);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Danh Sách Học Sinh";
+            // 
+            // dgvDSHS
+            // 
+            this.dgvDSHS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSHS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSHS.Location = new System.Drawing.Point(3, 22);
+            this.dgvDSHS.Name = "dgvDSHS";
+            this.dgvDSHS.Size = new System.Drawing.Size(386, 233);
+            this.dgvDSHS.TabIndex = 0;
             // 
             // btnTraCuuHocSinh
             // 
             this.btnTraCuuHocSinh.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnTraCuuHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraCuuHocSinh.Location = new System.Drawing.Point(122, 126);
+            this.btnTraCuuHocSinh.Location = new System.Drawing.Point(122, 103);
             this.btnTraCuuHocSinh.Name = "btnTraCuuHocSinh";
             this.btnTraCuuHocSinh.Size = new System.Drawing.Size(105, 46);
             this.btnTraCuuHocSinh.TabIndex = 3;
             this.btnTraCuuHocSinh.Text = "Tra Cứu Học Sinh";
             this.btnTraCuuHocSinh.UseVisualStyleBackColor = false;
-            // 
-            // dtNgaySinh
-            // 
-            this.dtNgaySinh.Location = new System.Drawing.Point(122, 94);
-            this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(261, 26);
-            this.dtNgaySinh.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Ngày Sinh:";
             // 
             // txtHoTen
             // 
@@ -222,15 +232,13 @@
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.btnLopHoc);
-            this.splitContainer3.Panel1.Controls.Add(this.btnHoSoHS);
             this.splitContainer3.Panel1.Controls.Add(this.btnXoaHocSinhTrongLop);
             this.splitContainer3.Panel1.Controls.Add(this.btnPhanLop);
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer3.Size = new System.Drawing.Size(501, 435);
+            this.splitContainer3.Size = new System.Drawing.Size(501, 475);
             this.splitContainer3.SplitterDistance = 109;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -240,27 +248,28 @@
             this.btnXoaHocSinhTrongLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaHocSinhTrongLop.Location = new System.Drawing.Point(3, 331);
             this.btnXoaHocSinhTrongLop.Name = "btnXoaHocSinhTrongLop";
-            this.btnXoaHocSinhTrongLop.Size = new System.Drawing.Size(103, 48);
+            this.btnXoaHocSinhTrongLop.Size = new System.Drawing.Size(103, 51);
             this.btnXoaHocSinhTrongLop.TabIndex = 1;
-            this.btnXoaHocSinhTrongLop.Text = "Chuyển Lớp";
+            this.btnXoaHocSinhTrongLop.Text = "Xóa HS khỏi DS lớp";
             this.btnXoaHocSinhTrongLop.UseVisualStyleBackColor = false;
+            this.btnXoaHocSinhTrongLop.Click += new System.EventHandler(this.btnXoaHocSinhTrongLop_Click);
             // 
             // btnPhanLop
             // 
             this.btnPhanLop.BackColor = System.Drawing.Color.Green;
             this.btnPhanLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanLop.Location = new System.Drawing.Point(3, 244);
+            this.btnPhanLop.Location = new System.Drawing.Point(3, 265);
             this.btnPhanLop.Name = "btnPhanLop";
             this.btnPhanLop.Size = new System.Drawing.Size(103, 50);
             this.btnPhanLop.TabIndex = 0;
-            this.btnPhanLop.Text = "Chuyển đến lớp";
+            this.btnPhanLop.Text = "Phân lớp HS";
             this.btnPhanLop.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnThoat);
             this.groupBox2.Controls.Add(this.btnDanhSachLop);
-            this.groupBox2.Controls.Add(this.btnLuuDanhSachLop);
+            this.groupBox2.Controls.Add(this.btnLoadDSLop);
             this.groupBox2.Controls.Add(this.txtSiSoLop);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.cbKhoi);
@@ -272,7 +281,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(388, 435);
+            this.groupBox2.Size = new System.Drawing.Size(388, 475);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Phân Lớp Học Sinh";
@@ -291,23 +300,23 @@
             // 
             this.btnDanhSachLop.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnDanhSachLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhSachLop.Location = new System.Drawing.Point(146, 125);
+            this.btnDanhSachLop.Location = new System.Drawing.Point(6, 438);
             this.btnDanhSachLop.Name = "btnDanhSachLop";
-            this.btnDanhSachLop.Size = new System.Drawing.Size(103, 50);
+            this.btnDanhSachLop.Size = new System.Drawing.Size(376, 34);
             this.btnDanhSachLop.TabIndex = 12;
             this.btnDanhSachLop.Text = "Danh Sách Lớp";
             this.btnDanhSachLop.UseVisualStyleBackColor = false;
             // 
-            // btnLuuDanhSachLop
+            // btnLoadDSLop
             // 
-            this.btnLuuDanhSachLop.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnLuuDanhSachLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuuDanhSachLop.Location = new System.Drawing.Point(16, 125);
-            this.btnLuuDanhSachLop.Name = "btnLuuDanhSachLop";
-            this.btnLuuDanhSachLop.Size = new System.Drawing.Size(99, 51);
-            this.btnLuuDanhSachLop.TabIndex = 4;
-            this.btnLuuDanhSachLop.Text = "Lưu Danh Sách Lớp";
-            this.btnLuuDanhSachLop.UseVisualStyleBackColor = false;
+            this.btnLoadDSLop.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnLoadDSLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadDSLop.Location = new System.Drawing.Point(67, 126);
+            this.btnLoadDSLop.Name = "btnLoadDSLop";
+            this.btnLoadDSLop.Size = new System.Drawing.Size(99, 51);
+            this.btnLoadDSLop.TabIndex = 4;
+            this.btnLoadDSLop.Text = "Cập nhật Danh Sách Lớp";
+            this.btnLoadDSLop.UseVisualStyleBackColor = false;
             // 
             // txtSiSoLop
             // 
@@ -370,52 +379,11 @@
             this.dgvDanhSachHocSinhPhanLop.Size = new System.Drawing.Size(379, 233);
             this.dgvDanhSachHocSinhPhanLop.TabIndex = 0;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dgvDSHS);
-            this.groupBox3.Location = new System.Drawing.Point(6, 171);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(392, 258);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Danh Sách Học Sinh";
-            // 
-            // dgvDSHS
-            // 
-            this.dgvDSHS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSHS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSHS.Location = new System.Drawing.Point(3, 22);
-            this.dgvDSHS.Name = "dgvDSHS";
-            this.dgvDSHS.Size = new System.Drawing.Size(386, 233);
-            this.dgvDSHS.TabIndex = 0;
-            // 
-            // btnHoSoHS
-            // 
-            this.btnHoSoHS.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnHoSoHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoSoHS.Location = new System.Drawing.Point(2, 49);
-            this.btnHoSoHS.Name = "btnHoSoHS";
-            this.btnHoSoHS.Size = new System.Drawing.Size(104, 50);
-            this.btnHoSoHS.TabIndex = 13;
-            this.btnHoSoHS.Text = "Hồ Sơ Học Sinh";
-            this.btnHoSoHS.UseVisualStyleBackColor = false;
-            // 
-            // btnLopHoc
-            // 
-            this.btnLopHoc.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLopHoc.Location = new System.Drawing.Point(4, 126);
-            this.btnLopHoc.Name = "btnLopHoc";
-            this.btnLopHoc.Size = new System.Drawing.Size(103, 50);
-            this.btnLopHoc.TabIndex = 14;
-            this.btnLopHoc.Text = "Quản Lý Lơp Học";
-            this.btnLopHoc.UseVisualStyleBackColor = false;
-            // 
             // PhanLopHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 481);
+            this.ClientSize = new System.Drawing.Size(909, 524);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -432,6 +400,8 @@
             this.splitContainer2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHS)).EndInit();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
@@ -439,8 +409,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHocSinhPhanLop)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHS)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,8 +421,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnDanhSachHocSinh;
         private System.Windows.Forms.Button btnTraCuuHocSinh;
-        private System.Windows.Forms.DateTimePicker dtNgaySinh;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -465,7 +431,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDanhSachLop;
-        private System.Windows.Forms.Button btnLuuDanhSachLop;
+        private System.Windows.Forms.Button btnLoadDSLop;
         private System.Windows.Forms.TextBox txtSiSoLop;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbKhoi;
@@ -475,7 +441,6 @@
         private System.Windows.Forms.DataGridView dgvDanhSachHocSinhPhanLop;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvDSHS;
-        private System.Windows.Forms.Button btnLopHoc;
         private System.Windows.Forms.Button btnHoSoHS;
     }
 }
