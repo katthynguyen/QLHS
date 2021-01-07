@@ -1,0 +1,8 @@
+lenh git tren branch 1760328
+branch cua vu tran quoc huy : 1760328
+---------------------------------------------
+b1: chuyen qua nhanh 1760328:
+lenh : git checkout 1760328
+b2: git push tu nhanh 1760328
+lenh: git push -u origin 1760328 
+b3: tao yeu cau merge request tren trang github nha
