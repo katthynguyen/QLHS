@@ -17,6 +17,6 @@ namespace STUDENT.GUI
             InitializeComponent();
         }
 
-        
+       
     }
 }
