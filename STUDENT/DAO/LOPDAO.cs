@@ -17,9 +17,10 @@ namespace STUDENT.DAO
         }
        public DataTable GetClassInGrade(string MaKhoi)
         {
-            string query = "SELECT * FROM LOP JOIN KHOI ON LOP.MaKhoi = KHOI.MaKhoi WHERE LOP.MaKhoi = @MaKhoi";
+            string query = string.Format( "SELECT Lop.MaLop, LOP.TenLop, KHOI.MaKhoi, KHOI.TenKhoi FROM LOP JOIN KHOI ON LOP.MaKhoi = KHOI.MaKhoi WHERE LOP.MaKhoi = {0}",MaKhoi);
             return SqlProvider.ExecuteQuery(query);
         }
+        
 
        
     }

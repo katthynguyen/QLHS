@@ -27,24 +27,15 @@ namespace STUDENT.GUI
 
         }
 
-        private void CbKhoi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-
+       
         // load danh sách lớp học 
         private void QuanLyLopHoc_Load(object sender, EventArgs e)
         {
             lopbus.GetAllClass(dgvDanhSachLop);
-
         }
 
         private void dgvDanhSachLop_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             int idx = dgvDanhSachLop.CurrentRow.Index;
             txtMaLop.Text = dgvDanhSachLop.Rows[idx].Cells["MaLop"].Value.ToString();
             cbLop.Text = dgvDanhSachLop.Rows[idx].Cells["TenLop"].Value.ToString();
@@ -53,14 +44,6 @@ namespace STUDENT.GUI
 
         }
 
-        //private void dgvDanhSachLop_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    int idx = dgvDanhSachLop.CurrentRow.Index;
-        //    txtMaLop.Text = dgvDanhSachLop.Rows[idx].Cells["MaLop"].Value.ToString();
-        //    cbLop.Text = dgvDanhSachLop.Rows[idx].Cells["TenLop"].Value.ToString();
-        //    cbKhoi.Text = dgvDanhSachLop.Rows[idx].Cells["Makhoi"].Value.ToString();
-        //    txtSiSo.Text = dgvDanhSachLop.Rows[idx].Cells["SiSo"].Value.ToString();
-        //}
 
 
     }

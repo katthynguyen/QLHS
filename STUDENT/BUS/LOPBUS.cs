@@ -13,35 +13,63 @@ namespace STUDENT.BUS
     class LOPBUS
     {
         LOPDAO dao = new LOPDAO();
-        KHOIDTO khoi = new KHOIDTO();
-        LOPDTO lop = new LOPDTO();
-        List<KHOIDTO> listKhoi; 
-        public DataTable GetAllClass()
-        {
-            return dao.GetAllClass();
-        }
-        public void ShowComboBoxLop(ComboBox comboBox)
-        {
-            comboBox.DataSource = dao.GetAllClass();
-            comboBox.DisplayMember = "TenLop";
-            comboBox.ValueMember = "MaLop";
-        }
-        public void ShowComboBoxLopKhoi(String khoiLop, ComboBox comboBox)
-        {
-            listKhoi = new List<KHOIDTO>();
-            comboBox.DataSource = listKhoi;
-            comboBox.DisplayMember = "TenKhoi";
-            
-            foreach (var item in listKhoi)
-            {
+        KHOIDAO daokhoi = new KHOIDAO();
+        LOPDTO lop;
+        List<KHOIDTO> listkhoi = new List<KHOIDTO>();
+        List<LOPDTO> listLop;
 
-                khoi.ListClass = new List<string>();
+       
+        public List<LOPDTO> GetAllClass(DataGridView data)
+        {
+            data.DataSource = dao.GetAllClass();
+           
+            foreach (DataGridViewRow item in data.Rows)
+            {               
+                string ClassId = item.Cells["MaLop"].Value.ToString();
+                string ClassName = item.Cells["TenLop"].Value.ToString();
+                string Amount = item.Cells["SiSo"].Value.ToString();
+                string GradeId = item.Cells["MaKhoi"].Value.ToString();
+               
+                if(Amount != null)
+                {
+                    try
+                    {
+                        listLop = new List<LOPDTO>();
+                        int amount = Int32.Parse(Amount);
+                        lop = new LOPDTO(ClassId, ClassName, amount, GradeId);
+                        listLop.Add(lop);                       
+                    }
+                    catch(FormatException e)
+                    {
+                        Console.WriteLine($"Unable to parse '{Amount}'");
+                        Console.WriteLine(e.Message);
+                    }
+                }
                
             }
-            comboBox.DataSource = dao.GetClassInGrade(khoiLop);
-            comboBox.ValueMember = "MaLop";
-            comboBox.DisplayMember = "TenLop";
+            return listLop;
+
         }
 
+        
+
+        public void ShowComboBoxClassByGrade(ComboBox cb, string Id)
+        {
+            cb.DataSource = dao.GetClassInGrade(Id);
+            listkhoi = new List<KHOIDTO>();
+            foreach (var khoi in listkhoi)
+            {
+                listLop = new List<LOPDTO>();
+                foreach (var lop in listLop)
+                {
+                    
+                }
+            }
+            cb.DisplayMember = "TenKhoi";
+            cb.ValueMember = "MaKhoi";
+
+            
+        }
+        
     }
 }
