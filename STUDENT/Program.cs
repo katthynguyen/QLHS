@@ -17,7 +17,7 @@ namespace STUDENT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuanLyKhoiLop());
+            Application.Run(new QuanLyLopHoc());
         }
     }
 }

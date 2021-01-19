@@ -11,8 +11,17 @@ namespace STUDENT.DTO
         private string maKhoi;
         private string tenKhoi;
 
+        public KHOIDTO()
+        {
+
+        }
+        public KHOIDTO(string ma, string ten)
+        {
+            this.maKhoi = ma;
+            this.tenKhoi = ten;
+        }
         public string MaKhoi { get => maKhoi; set => maKhoi = value; }
         public string TenKhoi { get => tenKhoi; set => tenKhoi = value; }
-        public List<string> ListClass { get; set; }
+        public List<LOPDTO> ListClass { get; set; }
     }
 }
