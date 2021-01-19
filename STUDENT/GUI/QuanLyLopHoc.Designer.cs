@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSiSo = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSachLop = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbLop = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnQuyDinhLop = new System.Windows.Forms.Button();
+            this.txtSiSo = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnCapNhatLop = new System.Windows.Forms.Button();
             this.btnXoaLop = new System.Windows.Forms.Button();
@@ -95,22 +95,6 @@
             this.label1.Size = new System.Drawing.Size(277, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ LỚP HỌC";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Sĩ Số:";
-            // 
-            // txtSiSo
-            // 
-            this.txtSiSo.Location = new System.Drawing.Point(97, 227);
-            this.txtSiSo.Name = "txtSiSo";
-            this.txtSiSo.Size = new System.Drawing.Size(163, 26);
-            this.txtSiSo.TabIndex = 9;
             // 
             // splitContainer2
             // 
@@ -183,6 +167,15 @@
             this.cbLop.Size = new System.Drawing.Size(163, 28);
             this.cbLop.TabIndex = 17;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 230);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Sĩ Số:";
+            // 
             // btnQuyDinhLop
             // 
             this.btnQuyDinhLop.BackColor = System.Drawing.Color.Green;
@@ -192,6 +185,13 @@
             this.btnQuyDinhLop.TabIndex = 15;
             this.btnQuyDinhLop.Text = "Quy Định";
             this.btnQuyDinhLop.UseVisualStyleBackColor = false;
+            // 
+            // txtSiSo
+            // 
+            this.txtSiSo.Location = new System.Drawing.Point(97, 227);
+            this.txtSiSo.Name = "txtSiSo";
+            this.txtSiSo.Size = new System.Drawing.Size(163, 26);
+            this.txtSiSo.TabIndex = 9;
             // 
             // btnThoat
             // 
