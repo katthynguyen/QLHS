@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using STUDENT.DTO;
 namespace STUDENT.DAO
 {
     class KHOIDAO
@@ -14,12 +14,20 @@ namespace STUDENT.DAO
             string query = "SELECT * FROM KHOI";
             return SqlProvider.ExecuteQuery(query);
         }
-       public DataTable GetGradeById(string MaKhoi)
+        public DataTable GetGRadeIdbyName(string name)
         {
-            string query = "SELECT * FROM KHOI WHERE KHOI.MaKhoi = @MaKhoi";
+            string query =string.Format( "SELECT * FROM KHOI WHERE {0}", name);
             return SqlProvider.ExecuteQuery(query);
         }
-        
-       
+        public DataTable SoLopMoiKhoi()
+        {           
+            string query = "SELECT KHOI.MaKhoi,count(LOP.MaLop) FROM KHOI JOIN LOP ON LOP.MaKhoi = KHOI.MaKhoi GROUP BY KHOI.MaKhoi";
+            DataTable dt = SqlProvider.ExecuteQuery(query);
+            return dt;
+        }
+
+
+
+
     }
 }

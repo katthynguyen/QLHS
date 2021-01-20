@@ -7,69 +7,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using STUDENT.BUS;
 namespace STUDENT.BUS
 {
     class LOPBUS
     {
         LOPDAO dao = new LOPDAO();
         KHOIDAO daokhoi = new KHOIDAO();
-        LOPDTO lop;
-        List<KHOIDTO> listkhoi = new List<KHOIDTO>();
-        List<LOPDTO> listLop;
-
        
-        public List<LOPDTO> GetAllClass(DataGridView data)
-        {
-            data.DataSource = dao.GetAllClass();
-           
-            foreach (DataGridViewRow item in data.Rows)
-            {               
-                string ClassId = item.Cells["MaLop"].Value.ToString();
-                string ClassName = item.Cells["TenLop"].Value.ToString();
-                string Amount = item.Cells["SiSo"].Value.ToString();
-                string GradeId = item.Cells["MaKhoi"].Value.ToString();
-               
-                if(Amount != null)
-                {
-                    try
-                    {
-                        listLop = new List<LOPDTO>();
-                        int amount = Int32.Parse(Amount);
-                        lop = new LOPDTO(ClassId, ClassName, amount, GradeId);
-                        listLop.Add(lop);                       
-                    }
-                    catch(FormatException e)
-                    {
-                        Console.WriteLine($"Unable to parse '{Amount}'");
-                        Console.WriteLine(e.Message);
-                    }
-                }
-               
-            }
-            return listLop;
 
-        }
+
+        List<KHOIDTO> listkhoi = new List<KHOIDTO>();
+        KHOIDTO khoi = new KHOIDTO();
+
+        // lấy danh sách lớp học
 
         
-
-        public void ShowComboBoxClassByGrade(ComboBox cb, string Id)
+        public List<LOPDTO> ListClass(DataGridView dgv, ComboBox cb, ComboBox cblop)
         {
-            cb.DataSource = dao.GetClassInGrade(Id);
-            listkhoi = new List<KHOIDTO>();
-            foreach (var khoi in listkhoi)
-            {
-                listLop = new List<LOPDTO>();
-                foreach (var lop in listLop)
-                {
-                    
-                }
-            }
+            List<LOPDTO> listlop = new List<LOPDTO>();
+            DataTable dt = dao.GetAllClass();
+            dgv.DataSource = dt;
+            cb.DataSource = dt;
             cb.DisplayMember = "TenKhoi";
             cb.ValueMember = "MaKhoi";
-
-            
+            cblop.DisplayMember = "TenLop";
+            cb.ValueMember = "MaLop";
+            foreach (DataRow item in dt.Rows)
+            {
+                foreach (var khoi in listlop)
+                {
+                    khoi.MaKhoi = item["MaKhoi"].ToString();
+                    khoi.TenKhoi = item["TenKhoi"].ToString();
+                    listlop.Add(khoi);
+                }
+            }
+           
+            return listlop;
         }
         
     }
+
+
+        
+        //public void ShowComboBoxClassByGrade(ComboBox cb, string Id)
+        //{
+        //    cb.DataSource = dao.GetClassInGrade(Id);
+        //    listkhoi = new List<KHOIDTO>();
+        //    foreach (var khoi in listkhoi)
+        //    {
+                
+        //    }
+        //    cb.DisplayMember = "TenKhoi";
+        //    cb.ValueMember = "MaKhoi";
+
+            
+        //}
+        
+    
 }

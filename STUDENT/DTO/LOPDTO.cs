@@ -36,7 +36,8 @@ namespace STUDENT.DTO
         public string MaLop { get => maLop; set => maLop = value; }
         public string TenLop { get => tenLop; set => tenLop = value; }
         public int SiSo { get => siSo; set => siSo = value; }
-        public string MaKhoi { get => maKhoi; set => maKhoi = value; }
+        public new string MaKhoi { get => maKhoi; set => maKhoi = value; }
         
+       
     }
 }
