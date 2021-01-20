@@ -15,40 +15,29 @@ namespace STUDENT.GUI
     public partial class QuanLyKhoiLop : Form
     {
         KHOIBUS khoibus = new KHOIBUS(); 
-        KHOIDTO khoi = new KHOIDTO();
-       
+        //KHOIDTO khoi = new KHOIDTO();
+        List<KHOIDTO> listkhoi = new List<KHOIDTO>();
+        
 
         public QuanLyKhoiLop()
         {
             InitializeComponent();
             Load += QuanLyKhoiLop_Load;
-            cbKhoi.SelectedIndexChanged += CbKhoi_SelectedIndexChanged;
-        }
-
-        private void CbKhoi_SelectedIndexChanged(object sender, EventArgs e)
-        {           
-            cbKhoi.SelectedItem = "TenKhoi";
-           // khoibus.showCombobox(cbKhoi.SelectedIndex, txtMaKhoi);
-        }
-
-        private void QuanLyKhoiLop_Load(object sender, EventArgs e)
-        {
            
+        }
 
-            khoibus.ShowComboBox(cbKhoi);
-            //khoibus.showCombobox(tenkhoi, cbKhoi);
-            LoadGrade();
-            
+       
+        private void QuanLyKhoiLop_Load(object sender, EventArgs e)
+        {           
+            khoibus.ListGrade(dgvDanhSachKhoi, cbKhoi, cbMaKhoi);
+           
         }
-        void LoadGrade()
-        {
-            dgvDanhSachKhoi.DataSource = khoibus.GetAllGrade();
-        }
+        
 
         private void dgvDanhSachKhoi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = dgvDanhSachKhoi.CurrentRow.Index;
-            txtMaKhoi.Text = dgvDanhSachKhoi.Rows[idx].Cells["Makhoi"].Value.ToString();
+            cbMaKhoi.Text = dgvDanhSachKhoi.Rows[idx].Cells["Makhoi"].Value.ToString();
             cbKhoi.Text = dgvDanhSachKhoi.Rows[idx].Cells["TenKhoi"].Value.ToString();            
         }
     }

@@ -132,7 +132,7 @@
             this.dgvDanhSachLop.Name = "dgvDanhSachLop";
             this.dgvDanhSachLop.Size = new System.Drawing.Size(508, 442);
             this.dgvDanhSachLop.TabIndex = 0;
-            this.dgvDanhSachLop.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachLop_CellContentClick);
+            this.dgvDanhSachLop.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachLop_CellContentClick_1);
             // 
             // groupBox2
             // 

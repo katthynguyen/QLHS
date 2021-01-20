@@ -21,17 +21,27 @@ namespace STUDENT.GUI
         {
             InitializeComponent();
             Load += PhanLopHocSinh_Load;
+            btnDanhSachLop.Click += BtnDanhSachLop_Click;
         }
 
+        private void BtnDanhSachLop_Click(object sender, EventArgs e)
+        {
+            danhsachlop();
+        }
+
+        void danhsachlop()
+        {
+            phanlopbus.GetStudentInClass(dgvDanhSachHocSinhPhanLop, cbLop);
+        }
         private void PhanLopHocSinh_Load(object sender, EventArgs e)
         {
-            khoibus.ShowComboBox(cbKhoi);
-            lop.ShowComboBoxLop(cbLop);
             LoadListStudentNotInClass();
+           
         }
         void LoadListStudentNotInClass()
         {
-            dgvDSHS.DataSource = phanlopbus.GetStudentNotInClass();
+             phanlopbus.GetStudentNotInClass(dgvDSHS, txtMaHocSinh, txtHoTen);
+            
         }
 
         private void btnXoaHocSinhTrongLop_Click(object sender, EventArgs e)

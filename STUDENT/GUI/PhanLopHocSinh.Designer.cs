@@ -50,8 +50,6 @@
             this.btnLoadDSLop = new System.Windows.Forms.Button();
             this.txtSiSoLop = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbKhoi = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbLop = new System.Windows.Forms.ComboBox();
             this.dgvDanhSachHocSinhPhanLop = new System.Windows.Forms.DataGridView();
@@ -272,8 +270,6 @@
             this.groupBox2.Controls.Add(this.btnLoadDSLop);
             this.groupBox2.Controls.Add(this.txtSiSoLop);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cbKhoi);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cbLop);
             this.groupBox2.Controls.Add(this.dgvDanhSachHocSinhPhanLop);
@@ -335,29 +331,11 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Sĩ Số:";
             // 
-            // cbKhoi
-            // 
-            this.cbKhoi.FormattingEnabled = true;
-            this.cbKhoi.Location = new System.Drawing.Point(67, 28);
-            this.cbKhoi.Name = "cbKhoi";
-            this.cbKhoi.Size = new System.Drawing.Size(309, 26);
-            this.cbKhoi.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Khối:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 64);
+            this.label2.Location = new System.Drawing.Point(14, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 20);
             this.label2.TabIndex = 2;
@@ -366,7 +344,7 @@
             // cbLop
             // 
             this.cbLop.FormattingEnabled = true;
-            this.cbLop.Location = new System.Drawing.Point(67, 57);
+            this.cbLop.Location = new System.Drawing.Point(67, 33);
             this.cbLop.Name = "cbLop";
             this.cbLop.Size = new System.Drawing.Size(309, 26);
             this.cbLop.TabIndex = 1;
@@ -434,8 +412,6 @@
         private System.Windows.Forms.Button btnLoadDSLop;
         private System.Windows.Forms.TextBox txtSiSoLop;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbKhoi;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbLop;
         private System.Windows.Forms.DataGridView dgvDanhSachHocSinhPhanLop;

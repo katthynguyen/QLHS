@@ -11,16 +11,15 @@ namespace STUDENT.DAO
     {
         public DataTable GetAllStudentNotInClass()
         {
-            string query = " SELECT * " +
-                            "FROM DBO.HOCSINH HS " +
-                            "WHERE HS.MaHocSinh " +
-                            "NOT IN( SELECT HS1.MaHocSinh " +
-                                    "FROM DBO.HOCSINH HS1 " +
-                                    "JOIN PHANLOP PL " +
-                                    "ON HS1.MaHocSinh = PL.MaHocSinh " +
-                                    "JOIN LOP L " +
-                                    "ON L.MaLop = PL.MaLop)";
+            string query = " SELECT * FROM DBO.HOCSINH HS WHERE HS.MaHocSinh NOT IN( SELECT HS1.MaHocSinh FROM DBO.HOCSINH HS1 JOIN PHANLOP PL ON HS1.MaHocSinh = PL.MaHocSinh JOIN LOP L ON L.MaLop = PL.MaLop)";
    
+            return SqlProvider.ExecuteQuery(query);
+        }
+        public DataTable GetAllStudentClass()
+        {
+            string query ="SELECT * FROM HOCSINH JOIN PHANLOP ON HOCSINH.MaHocSinh = PHANLOP.MaHocSinh ";
+                           
+
             return SqlProvider.ExecuteQuery(query);
         }
     }

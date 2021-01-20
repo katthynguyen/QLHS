@@ -12,40 +12,34 @@ namespace STUDENT.BUS
 {
     class KHOIBUS
     {
+
         KHOIDAO dao = new KHOIDAO();
-        //KhoiLopData m_KhoiLopData = new KhoiLopData();
+        List<KHOIDTO> Listkhoi = new List<KHOIDTO>();
 
-        public DataTable GetAllGrade()
+
+        public List<KHOIDTO> ListGrade(DataGridView dgv, ComboBox cb, ComboBox cbma)
         {
-            return dao.GetAllGRade();
+            DataTable dt = dao.GetAllGRade();
+            dgv.DataSource = dt;
+            cb.DataSource = dt;
+            cb.DisplayMember = "TenKhoi";
+            cb.ValueMember = "MaKhoi";
+            cbma.DataSource = dt;
+            cbma.DisplayMember = "MaKhoi";
+            cbma.ValueMember = "MaKhoi";
+            
+            foreach (DataRow item in dt.Rows)
+            {
+                foreach (var khoi in Listkhoi)
+                {
+                    khoi.MaKhoi = item["MaKhoi"].ToString();
+                    khoi.TenKhoi = item["TenKhoi"].ToString();
+                    Listkhoi.Add(khoi);
+                }
+            }
+
+            return Listkhoi;
         }
-        #region Hien thi ComboBox
-        public void ShowComboBox(ComboBox comboBox)
-        {
-            comboBox.DataSource = dao.GetAllGRade();
-            comboBox.DisplayMember = "TenKhoi";
-            comboBox.ValueMember = "MaKhoi";
-        }
-        #endregion
-
-        #region Hien Thi MaKhoi Theo Ten Khoi
-       
-        #endregion
-        #region hien thi combobox trong datagridview
-        public void Showdatagridviewcomboboxcolumn(DataGridViewComboBoxColumn cmbcolumn)
-        {
-            cmbcolumn.DataSource = dao.GetAllGRade();
-            cmbcolumn.DisplayMember = "Tenkhoi";
-            cmbcolumn.ValueMember = "Makhoi";
-            cmbcolumn.DataPropertyName = "Makhoi";
-            cmbcolumn.HeaderText = "khối lớp";
-        }
-        #endregion
-
-        #region
-
-        #endregion
-
-
+     
     }
 }

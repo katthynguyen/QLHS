@@ -16,36 +16,41 @@ namespace STUDENT.GUI
     {
 
         LOPBUS lopbus = new LOPBUS();
-        KHOIBUS khoibus = new KHOIBUS();
-        KHOIDTO khoi = new KHOIDTO();
-        LOPDTO lop = new LOPDTO();
+        KHOIBUS khoibus = new KHOIBUS();       
 
         public QuanLyLopHoc()
         {
             InitializeComponent();
             Load += QuanLyLopHoc_Load;
-
+            cbKhoi.SelectedValueChanged += CbKhoi_SelectedValueChanged;
+           
         }
 
-       
+        private void CbKhoi_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(cbKhoi.SelectedValue != null)
+            {
+                
+            }
+        }
+
+
         // load danh sách lớp học 
         private void QuanLyLopHoc_Load(object sender, EventArgs e)
         {
-            lopbus.GetAllClass(dgvDanhSachLop);
+           
+            lopbus.ListClass(dgvDanhSachLop, cbKhoi, cbLop);
         }
 
-        private void dgvDanhSachLop_CellContentClick(object sender, DataGridViewCellEventArgs e)
+      
+        private void dgvDanhSachLop_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int idx = dgvDanhSachLop.CurrentRow.Index;
             txtMaLop.Text = dgvDanhSachLop.Rows[idx].Cells["MaLop"].Value.ToString();
             cbLop.Text = dgvDanhSachLop.Rows[idx].Cells["TenLop"].Value.ToString();
-            cbKhoi.Text = dgvDanhSachLop.Rows[idx].Cells["Makhoi"].Value.ToString();
+            cbKhoi.Text = dgvDanhSachLop.Rows[idx].Cells["MaKhoi"].Value.ToString();
             txtSiSo.Text = dgvDanhSachLop.Rows[idx].Cells["SiSo"].Value.ToString();
-
         }
-
-
-
     }
     }
 

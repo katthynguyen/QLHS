@@ -39,8 +39,8 @@
             this.txtSoLopMoiKhoi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMaKhoi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbMaKhoi = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachKhoi)).BeginInit();
@@ -89,13 +89,13 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.Controls.Add(this.cbMaKhoi);
             this.groupBox2.Controls.Add(this.cbKhoi);
             this.groupBox2.Controls.Add(this.btnQuanLyLopHoc);
             this.groupBox2.Controls.Add(this.btnQuyDinhKhoi);
             this.groupBox2.Controls.Add(this.txtSoLopMoiKhoi);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtMaKhoi);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,13 +159,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên Khối:";
             // 
-            // txtMaKhoi
-            // 
-            this.txtMaKhoi.Location = new System.Drawing.Point(185, 33);
-            this.txtMaKhoi.Name = "txtMaKhoi";
-            this.txtMaKhoi.Size = new System.Drawing.Size(177, 26);
-            this.txtMaKhoi.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -174,6 +167,14 @@
             this.label1.Size = new System.Drawing.Size(70, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Khối:";
+            // 
+            // cbMaKhoi
+            // 
+            this.cbMaKhoi.FormattingEnabled = true;
+            this.cbMaKhoi.Location = new System.Drawing.Point(185, 33);
+            this.cbMaKhoi.Name = "cbMaKhoi";
+            this.cbMaKhoi.Size = new System.Drawing.Size(177, 28);
+            this.cbMaKhoi.TabIndex = 9;
             // 
             // QuanLyKhoiLop
             // 
@@ -201,7 +202,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvDanhSachKhoi;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtMaKhoi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnQuanLyLopHoc;
         private System.Windows.Forms.Button btnQuyDinhKhoi;
@@ -209,5 +209,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbKhoi;
+        private System.Windows.Forms.ComboBox cbMaKhoi;
     }
 }
